@@ -5,7 +5,6 @@ Thesis 2021
 
 | Role                  | Name             |
 |-----------------------|------------------|
-| Frontend Developer    | Aziz Durmuş      |
 | Full-Stack Developer  | Furkan Enes Eren |
 
 ## Project : `Feed Me`

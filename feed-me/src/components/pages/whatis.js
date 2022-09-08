@@ -6,8 +6,9 @@ function WhatIs() {
 
             <div className="whatis-text">
                 <h2>What is Feed Me?</h2>
+                <br />
                 <p>Feed me is an application developed for stray animals.
-                    Volunteers use this app to find stray animals that need feeding. </p>
+                    Volunteers use this app to find areas that stray animals need feeding. </p>
                 <p> </p>
             </div>
             <div className="whatis-image">

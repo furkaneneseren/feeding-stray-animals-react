@@ -21,13 +21,6 @@ function Navbar() {
                         </NavLink>
                     </li>
                     <li className="item">
-                        <NavLink exact to="/map"
-                            className="link"
-                            onClick={handleClick}>
-                            Map
-                        </NavLink>
-                    </li>
-                    <li className="item">
                         <NavLink exact to="/login"
                             className="link"
                             onClick={handleClick}>

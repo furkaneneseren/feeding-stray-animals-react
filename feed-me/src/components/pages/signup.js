@@ -12,7 +12,15 @@ import {
 } from '@material-ui/core'
 import AddCircleOutlineOutlinedIcon from '@material-ui/icons/AddCircleOutlineOutlined';
 import { makeStyles } from '@material-ui/core/styles';
-import './signup.css'
+import './signup.css';
+import { auth } from "../../firebase";
+import {
+    createUserWithEmailAndPassword,
+    signInWithEmailAndPassword,
+    onAuthStateChanged,
+    signOut,
+} from "firebase/auth";
+import { useHistory } from 'react-router-dom'
 
 const useStyles = makeStyles((theme) => ({
     formControl: {
@@ -30,22 +38,41 @@ const SignUp = () => {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    
+    const [user, setUser] = useState({});
+
     Axios.defaults.withCredentials = true;
 
-    const handleSignUp = (e) => {
-        e.preventDefault();
+    onAuthStateChanged(auth, (currentUser) => {
+        setUser(currentUser);
+      });
 
-        if(name && email && password){
-            console.log(name,email,password);
-            Axios.post('http://localhost:3001/api/savePerson', {
-            name: name,
-            email: email,
-            password: password
-        }).then(() => {
-            alert('success insert');
-          })
-        }
+      
+    const history = useHistory();
+
+    const handleSignUp = async (e) => {
+        e.preventDefault();
+        try {
+            const user = await createUserWithEmailAndPassword(
+              auth,
+              email,
+              password
+            );
+            console.log(user);
+            history.push("/map");
+          } catch (error) {
+            console.log(error.message);
+          }
+
+        // if (name && email && password) {
+        //     console.log(name, email, password);
+        //     Axios.post('http://localhost:3001/api/savePerson', {
+        //         name: name,
+        //         email: email,
+        //         password: password
+        //     }).then(() => {
+        //         alert('success insert');
+        //     })
+        // }
     }
 
     // const classes = useStyles();
@@ -90,10 +117,6 @@ const SignUp = () => {
                         <h3 style={hStyle}>Sign Up</h3>
                     </Grid>
                     <form noValidate autoComplete="off" onSubmit={handleSignUp} className="form-design">
-                        <TextField onChange={(e) => setName(e.target.value)} color="secondary" label="Username"
-                            placeholder="Enter your full name"
-                            type="text" fullWidth
-                            required />
                         <TextField onChange={(e) => setEmail(e.target.value)} color="secondary" label="E-mail"
                             placeholder="Enter your e-mail"
                             type="email" fullWidth

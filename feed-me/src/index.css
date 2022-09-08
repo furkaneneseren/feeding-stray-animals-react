@@ -60,7 +60,21 @@ h1 {
   z-index: 10;
 }
 
-.myLocation img {
-  width: 80px;
+.heatMap {
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  background: none;
+  border: none;
+  z-index: 10;
   cursor: pointer;
+}
+
+.myLocation img {
+  cursor: pointer;
+}
+
+.progress-bar{
+  height: 5px;
+  background: var(pink);
 }

@@ -22,6 +22,10 @@ Also, if they want, they can upload a picture to the system as proof.
 | :--:|
 | *Marker Infobox* |
 
+| ![marker-heatmap](feed-me/public/markers-heatmap.png) |
+| :--:|
+| *Markers with Heatmap* |
+
 ## Before Start
 
 In order to start the project, you will need `node` and `npm` installed on your machine.

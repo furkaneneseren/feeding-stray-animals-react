@@ -14,6 +14,8 @@ Users choose the most proper location for them from the map in the application. 
 with the food they bought for stray animals. After users feed the stray animals, they mark the place that they went.
 Also, if they want, they can upload a picture to the system as proof. 
 
+![marker-form] (feed-me/public/marker-form.png)
+
 ## Before Start
 
 In order to start the project, you will need `node` and `npm` installed on your machine.

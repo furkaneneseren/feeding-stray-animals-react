@@ -18,6 +18,10 @@ Also, if they want, they can upload a picture to the system as proof.
 | :--:|
 | *Marker Form* |
 
+| ![marker-infobox](feed-me/public/marker-infobox.png) |
+| :--:|
+| *Marker Infobox* |
+
 ## Before Start
 
 In order to start the project, you will need `node` and `npm` installed on your machine.

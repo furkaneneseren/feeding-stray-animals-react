@@ -9,10 +9,30 @@ Thesis 2021
 
 ## Project : `Feed Me`
 
-Feed Me is a web application that holding the location data of stray animals.
+Feed Me is a web application that holding the location data of dropped foods or pet foods for stray animals.
 Users choose the most proper location for them from the map in the application. Then they go to their designated location 
-with the food they bought for stray animals. After users feed the stray animals, they mark the place that they went.
+with the food they bring for stray animals. After users dropped food for the stray animals, they mark the place that they went.
 Also, if they want, they can upload a picture to the system as proof. 
+
+When people using the application give food to street animals, they will mark the type of food, time and location on the map and share them with other people using the application. Thus, serving food at the same times in the same regions is prevented and food waste will be reduced. In addition, animal lovers will be able to see the regions on the map that are not given enough food and, if they wish, distribute food in these regions.
+
+In development phase, in the begining NodeJS, Axios and MySQL is used for store user and marker informations. After that, for improvement, planned a serverless architecture with Google Firebase. Backend is moved to Firebase and storing data done in there (cloud). With firebase, user interactions with application is showing to other users immediately.
+
+## Tech and Libraries
+
+- ReactJS
+- HTML
+- Css
+- Google Maps API
+- Google Places
+- MySQL
+- NodeJS
+- Firebase
+- Axios
+- Docker
+- Postman
+
+
 
 | ![marker-form](feed-me/public/marker-form.png) |
 | :--:|
@@ -25,6 +45,14 @@ Also, if they want, they can upload a picture to the system as proof.
 | ![marker-heatmap](feed-me/public/markers-heatmap.png) |
 | :--:|
 | *Markers with Heatmap* |
+
+| ![firebase-firestore](feed-me/public/firebase-firestore.png) |
+| :--:|
+| *Firestore* |
+
+| ![nodejs-mysql](feed-me/public/nodejs-mysql.png) |
+| :--:|
+| *NodeJS before Firebase* |
 
 ## Before Start
 
